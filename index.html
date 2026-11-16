@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <title>CSS Border UI Style</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="page-header">
+      <h1>CSS Border UI Style</h1>
+    </header>
+
+    <section class="tool-card" aria-label="CSS border style playground">
+      <div class="preview-panel">
+        <div class="preview-box" id="previewBox" aria-label="Live border preview"></div>
+        <div class="preview-info">
+          <h2 id="styleName">solid</h2>
+          <p id="styleDescription">Clean and simple border</p>
+        </div>
+      </div>
+
+      <div class="controls-panel">
+        <div class="style-options" id="styleOptions" aria-label="Border styles">
+          <button class="style-button selected" type="button" data-style="solid">solid</button>
+          <button class="style-button" type="button" data-style="dashed">dashed</button>
+          <button class="style-button" type="button" data-style="dotted">dotted</button>
+          <button class="style-button" type="button" data-style="double">double</button>
+          <button class="style-button" type="button" data-style="groove">groove</button>
+          <button class="style-button" type="button" data-style="ridge">ridge</button>
+          <button class="style-button" type="button" data-style="inset">inset</button>
+          <button class="style-button" type="button" data-style="outset">outset</button>
+          <button class="style-button" type="button" data-style="none">none</button>
+          <button class="style-button" type="button" data-style="hidden">hidden</button>
+        </div>
+
+        <div class="range-row">
+          <label for="widthRange">Width</label>
+          <input id="widthRange" type="range" min="0" max="20" value="8">
+          <output id="widthValue" for="widthRange">8px</output>
+        </div>
+        <div class="range-row">
+          <label for="radiusRange">Radius</label>
+          <input id="radiusRange" type="range" min="0" max="50" value="28">
+          <output id="radiusValue" for="radiusRange">28px</output>
+        </div>
+        <div class="color-row">
+          <label for="borderColor">Color</label>
+          <input id="borderColor" type="color" value="#6e5bec" aria-label="Border color">
+        </div>
+      </div>
+
+      <section class="code-output" aria-label="Generated CSS">
+        <div class="code-label">CSS</div>
+        <pre><code id="cssCode">border: 8px solid #6e5bec;
+border-radius: 28px;</code></pre>
+        <button class="copy-button" id="copyButton" type="button">Copy CSS</button>
+        <span class="copy-status" id="copyStatus" role="status" aria-live="polite"></span>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
